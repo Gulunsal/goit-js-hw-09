@@ -1,32 +1,29 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
-
-/* Sections style */
-@import url('./header.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
-
-/** 
-  |============================
-  | Form and Gallery Styles
-  |============================
-*/
-
-/* Back Link Container */
-.back-link-container {
-  margin-left: 40px; /* Soldan 40px boşluk */
-  text-align: left; /* Butonu sola hizala */
+/* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1128px;
+  margin: 24px auto;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  transition: all ease-in 0.2s;
+}
+
+.gallery-image:hover {
+  scale: 1.05;
+}
+
+//
 
 /* Gallery Section */
 #gallery {
