@@ -20,7 +20,7 @@ function fillData(localStorage) {
 
 fillData(localData);
 
-//forma girilen inputları localstoragede saklamak için
+//forma girilen inputları localstoragede tutmak için
 form.addEventListener('input', (event) => {
   if (event.target.name === 'email') {
     formData.email = event.target.value.trim();
@@ -36,7 +36,7 @@ submit.addEventListener('click', (event) => {
   event.preventDefault();
 
   if (formData.email === '' || formData.message === '') {
-    alert('Lütfen bütün alanları doldurunuz');
+    alert('Bu alanları doldurmanız gerekmektedir.');
   }
 
   console.log(formData);

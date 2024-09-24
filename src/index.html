@@ -9,23 +9,26 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-
 <body>
 
-  <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-  <div class="back-link-container">
-    <a class="back-link" href="./index.html">Go back</a>
-  </div>
+  <div class="header-container">
+    <load src="./partials/header.html" icon-path="./img/sprite.svg#logo" highlight-curr="active" />
 
-  <main>
-    <!-- Loads the specified .html file -->
+    <main>
+      <div class="back-link-container">
+        <a class="back-link" href="./index.html">Go back</a>
 
-    <load src="./partials/badges.html" />
-  </main>
+      </div>
 
-  <load src="./partials/footer.html" />
+      <load src="./partials/badges.html" />
 
-  <script type="module" src="./main.js"></script>
+    </main>
+
+    <load src="./partials/footer.html" />
+
+    <script type="module" src="./main.js"></script>
+
+
 </body>
 
 </html>

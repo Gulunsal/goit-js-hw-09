@@ -4,6 +4,7 @@
   | default @import url()
   |============================
 */
+/**
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
@@ -15,86 +16,5 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
-
-/** 
-  |============================
-  | Form and Gallery Styles
-  |============================
-*/
-
-/* Back Link Container */
-.back-link-container {
-  margin-left: 40px; /* Soldan 40px boşluk */
-  text-align: left; /* Butonu sola hizala */
-}
-
-/* Gallery Section */
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Esnek kart düzeni */
-  gap: 20px; /* Kartlar arasındaki boşluk */
-  justify-items: center; /* Kartları yatayda ortalar */
-  padding: 20px;
-}
-
-.image-card {
-  width: 100%; /* Kart genişliği */
-  border: 1px solid #ddd;
-  border-radius: 10px; /* Yuvarlatılmış köşeler */
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-  background-color: #fff;
-  transition: transform 0.2s ease; /* Hover'da büyütme efekti */
-}
-
-.image-card:hover {
-  transform: scale(1.05); /* Hover sırasında hafif büyütme */
-}
-
-/* Modal pencere başlangıçta gizli */
-.modal {
-  display: none; /* Modal gizli başlar */
-  position: fixed;
-  z-index: 1000;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 800px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  justify-content: center;
-  align-items: center;
-}
-
-/* Modal içindeki görsel */
-.modal-content {
-  max-width: 100%;
-  max-height: 80vh;
-  display: block;
-  object-fit: contain;
-}
-
-/* Kapatma butonu */
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 30px;
-  color: black;
-  cursor: pointer;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+@import url('./form.css');
+@import url('./gallery.css');

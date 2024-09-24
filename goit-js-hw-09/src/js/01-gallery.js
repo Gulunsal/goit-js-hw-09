@@ -1,7 +1,9 @@
+// SimpleLightbox kütüphanesini yükle
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const images = [
+// Galeri öğelerini tanımla
+const galleryItems = [
   {
     preview:
       'https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg',
@@ -67,33 +69,25 @@ const images = [
   },
 ];
 
-const ul = document.querySelector('ul.gallery');
+// Galeri oluşturma
+const galleryContainer = document.querySelector('.gallery');
+const galleryMarkup = galleryItems
+  .map(
+    ({ preview, original, description }) => `
+  <li class="gallery-item">
+    <a class="gallery-link" href="${original}">
+      <img class="gallery-image" src="${preview}" alt="${description}" />
+    </a>
+  </li>
+`
+  )
+  .join('');
 
-images.forEach((image) => {
-  const li = document.createElement('li');
-  const a = document.createElement('a');
-  const img = document.createElement('img');
+// Galeri markup'ı HTML'e ekliyoruz
+galleryContainer.innerHTML = galleryMarkup;
 
-  a.href = image.original;
-  a.classList.add('gallery-link');
-  img.src = image.preview;
-  img.alt = image.description;
-  img.dataset.source = image.original;
-  img.classList.add('gallery-image');
-  li.classList.add('gallery-item');
-
-  a.appendChild(img);
-  li.appendChild(a);
-  ul.appendChild(li);
-
-  a.addEventListener('click', (event) => {
-    //linklerin fotoğrafı indirmesini engellemek için
-    event.preventDefault();
-  });
-});
-
-//SimpleLightBox kütüphanesiyle modal oluşturmak için
-const lightbox = new SimpleLightbox('.gallery li > a', {
+// SimpleLightbox'u başlatıyoruz
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
