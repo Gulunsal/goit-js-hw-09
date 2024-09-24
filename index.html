@@ -6,14 +6,17 @@
   <link rel="icon" type="image/svg+xml" href="/goit-js-hw-09/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GOIT HOMEWORK JS 09</title>
-  <script type="module" crossorigin src="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
-  <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/index-CZsLvaIP.css">
+  <script type="module" crossorigin src="/goit-js-hw-09/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/goit-js-hw-09/assets/vendor-CgTBfC_f.js">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/vendor-DkczhqSJ.css">
+  <link rel="stylesheet" crossorigin href="/goit-js-hw-09/assets/styles-B8-gdG_2.css">
 </head>
-
 
 <body>
 
-  <header class="header">
+  <div class="header-container">
+    <header class="header">
   <div class="container">
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
@@ -23,23 +26,23 @@
       </a>
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Gallery</a>
+          <a class="nav-link {=$highlight-act}" href="./01-gallery.html">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Form</a>
+          <a class="nav-link active" href="./02-form.html">Form</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
-  <div class="back-link-container">
-    <a class="back-link" href="./index.html">Go back</a>
-  </div>
 
-  <main>
-    <!-- Loads the specified .html file -->
+    <main>
+      <div class="back-link-container">
+        <a class="back-link" href="./index.html">Go back</a>
 
-    <article class="badges">
+      </div>
+
+      <article class="badges">
   <div class="container">
     <ul class="badges-list">
       <li class="badges-item">
@@ -76,9 +79,10 @@
   </div>
 </article>
 
-  </main>
 
-  <footer class="footer">
+    </main>
+
+    <footer class="footer">
   <div class="container">
     <p class="footer-desc">
       Made with ✨ by
@@ -93,6 +97,8 @@
     </p>
   </div>
 </footer>
+
+
 
 
 </body>
